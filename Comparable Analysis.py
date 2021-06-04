@@ -1,4 +1,3 @@
-from numpy.core.fromnumeric import mean
 import yahoo_fin.stock_info as yf
 import pandas as pd
 import numpy as np
@@ -10,8 +9,8 @@ valuation = []
 years = []
 
 ticker_value = "BHP"
-tickers = ["AMD", "ADI", "AAPL", "AMAT", "CSCO", "AVGO", "INTC", "LRCX", "MU", "QCOM", "TXN"]
-#tickers = ["AAL", "RIO", "SCCO", "VALE"]
+tickers = ["AMD", "ADI", "AAPL", "AMAT", "CSCO", "AVGO", "INTC", "LRCX", "MU", "QCOM", "TXN"] #semiconductor companies
+#tickers = ["AAL", "RIO", "SCCO", "VALE"] #Mining companies
 
 market_multiples = pd.DataFrame({}, index=tickers, columns=["EV/Sales", "EV/Ebitda", "P/E"])
 market = pd.DataFrame({}, index=["mean", "median"], columns=["EV/Sales", "EV/Ebitda", "P/E"])
